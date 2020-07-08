@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidLatihan</string>
+    <string-array name="role_item">
+        <item>Admin</item>
+        <item>User</item>
+    </string-array>
 </resources>
