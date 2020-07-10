@@ -63,6 +63,7 @@
                         android:textAllCaps="true"
                         android:textColor="@color/whitw"/>
                     <EditText
+                        android:id="@+id/username_login"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/et_bg"
@@ -88,8 +89,10 @@
                         android:text="Password"
                         android:textSize="15sp"
                         android:textAllCaps="true"
-                        android:textColor="@color/whitw"/>
+                        android:textColor="@color/whitw"
+                        />
                     <EditText
+                        android:id="@+id/password_login"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/et_bg"
@@ -98,7 +101,8 @@
                         android:fontFamily="sans-serif-light"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
-                        android:layout_marginTop="5dp"/>
+                        android:layout_marginTop="5dp"
+                        android:inputType="textPassword"/>
 
 
                 </LinearLayout>
