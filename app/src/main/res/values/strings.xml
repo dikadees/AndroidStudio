@@ -4,4 +4,12 @@
         <item>Admin</item>
         <item>User</item>
     </string-array>
+    <string name="validation">AndroidValidationExample</string>
+
+    <string name="usernameError">Enter a valid username</string>
+    <string name="emailError">Enter a valid email</string>
+    <string name="fullNameError">Enter a valid fullname</string>
+    <string name="passwordError">Enter a valid password</string>
+    <string name="roleError">Enter a valid role</string>
+    <string name="activeError">Enter a Active</string>
 </resources>

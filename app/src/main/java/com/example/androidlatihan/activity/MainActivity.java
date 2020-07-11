@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         username = findViewById(R.id.username_login);
         password = findViewById(R.id.password_login);
 
-        //
+        //askpermission
         Utility.askPermission(this);
         retrofit = RetrofitUtility.initializeRetrofit();
 
@@ -72,11 +72,11 @@ public class MainActivity extends AppCompatActivity {
                     username.setError("Username harus diisi");
                     password.setError("Password harus diisi");
                 } else if (username.getText().toString().length()==0){
-                    username.setError("Password harus diisi");
+                    username.setError("Username harus diisi");
                 } else if (password.getText().toString().length()==0){
                     password.setError("Password harus diisi");
                 } else {
-                    loginSubmit("admin","admin");
+                    loginSubmit(username.getText().toString(),password.getText().toString());
                 }
             }
         });
@@ -106,6 +106,11 @@ public class MainActivity extends AppCompatActivity {
                     if (response.body().isSuccess()){
                         Toast.makeText(getApplicationContext(), "Login  " +
                                 "Berhasil", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
+//                        String hasilLogin = jsonRestApi.getLogin(loginModel);
+//                        Intent intent = new Intent(mContext, MainActivity.class);
+//                        intent.putExtra("result_nama", nama);
+                        startActivity(intent);
                     }
                     else {
                         Toast.makeText(getApplicationContext(), "Login  " +
