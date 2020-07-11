@@ -1,10 +1,12 @@
-package com.example.androidlatihan;
+package com.example.androidlatihan.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class welcome extends AppCompatActivity {
+import com.example.androidlatihan.R;
+
+public class WelcomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

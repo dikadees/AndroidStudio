@@ -1,4 +1,4 @@
-package com.example.androidlatihan;
+package com.example.androidlatihan.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,7 +12,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class signup extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+import com.example.androidlatihan.R;
+
+public class SignupActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     private EditText username, fullname, email, password;
     private Button daftar;
