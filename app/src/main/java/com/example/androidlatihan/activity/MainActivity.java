@@ -106,10 +106,8 @@ public class MainActivity extends AppCompatActivity {
                     if (response.body().isSuccess()){
                         Toast.makeText(getApplicationContext(), "Login  " +
                                 "Berhasil", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
-//                        String hasilLogin = jsonRestApi.getLogin(loginModel);
-//                        Intent intent = new Intent(mContext, MainActivity.class);
-//                        intent.putExtra("result_nama", nama);
+                        AppService.setToken("Bearer " + response.body().getToken());
+                        Intent intent = new Intent(MainActivity.this, BookActivity.class);
                         startActivity(intent);
                     }
                     else {
