@@ -4,8 +4,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class BookAdapter implements Parcelable {
-    private int id,thumb;
-    private String judul,penulis;
+    private int id;
+    private String thumb,judul,penulis;
 
     public BookAdapter(){
     }
@@ -14,7 +14,7 @@ public class BookAdapter implements Parcelable {
         id = in.readInt();
         judul = in.readString();
         penulis = in.readString();
-        thumb = in.readInt();
+        thumb = in.readString();
     }
 
     public static final Creator CREATOR = new Creator() {
@@ -37,7 +37,7 @@ public class BookAdapter implements Parcelable {
         dest.writeInt(id);
         dest.writeString(judul);
         dest.writeString(penulis);
-        dest.writeInt(thumb);
+        dest.writeString(thumb);
     }
 
 
@@ -49,11 +49,11 @@ public class BookAdapter implements Parcelable {
         this.id = id;
     }
 
-    public int getThumb() {
+    public String  getThumb() {
         return thumb;
     }
 
-    public void setThumb(int thumb) {
+    public void setThumb(String  thumb) {
         this.thumb = thumb;
     }
 

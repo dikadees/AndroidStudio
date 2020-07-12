@@ -2,15 +2,16 @@ package com.example.androidlatihan.model;
 
 public class Book {
     private int id,harga,userid;
-    private String judul,penerbit,penulis;
+    private String judul,penerbit,penulis,thumb;
 
-    public Book(int id, int harga, int userid, String judul, String penerbit, String penulis) {
+    public Book(int id, int harga, int userid, String judul, String penerbit, String penulis,String thumb) {
         this.id = id;
         this.harga = harga;
         this.userid = userid;
         this.judul = judul;
         this.penerbit = penerbit;
         this.penulis = penulis;
+        this.thumb = thumb;
     }
 
     public Book() {
@@ -62,5 +63,13 @@ public class Book {
 
     public void setPenulis(String penulis) {
         this.penulis = penulis;
+    }
+
+    public String getThumb() {
+        return thumb;
+    }
+
+    public void setThumb(String thumb) {
+        this.thumb = thumb;
     }
 }

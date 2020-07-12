@@ -1,5 +1,8 @@
 package com.example.androidlatihan.adapter;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +40,9 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
     public void onBindViewHolder(MemberViewHolder holder, int position) {
         final BookAdapter bookAdapter = bookAdaptersList.get(position);
 
-        holder.bookThumb.setImageResource(bookAdapter.getThumb());
+        Bitmap bitmap = getBitmap(bookAdapter.getThumb());
+
+        holder.bookThumb.setImageBitmap(bitmap);
         holder.judul.setText(bookAdapter.getJudul());
         holder.penulis.setText(bookAdapter.getPenulis());
 
@@ -70,6 +75,11 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
             judul = itemView.findViewById(R.id.judul);
             penulis = itemView.findViewById(R.id.penulis);
         }
+    }
+    private Bitmap getBitmap(String base64String){
+        byte[] decodedString = Base64.decode(base64String,Base64.DEFAULT);
+        Bitmap decodeByte = BitmapFactory.decodeByteArray(decodedString,0,decodedString.length);
+        return decodeByte;
     }
 
 
