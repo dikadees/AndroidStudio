@@ -6,10 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".activity.BookActivity"
     android:background="@drawable/grad_bg">
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"

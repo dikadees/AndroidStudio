@@ -22,17 +22,18 @@ public class BookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
 
+        openHomeFragment();
+
         floatingActionButton1 = findViewById(R.id.fabAdd);
         floatingActionButton2 = findViewById(R.id.fabEdit);
         floatingActionButton  = findViewById(R.id.fabHome);
 
-        openHomeFragment();
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // action
-                openAddFragment();
+                openHomeFragment();
             }
         });
 
