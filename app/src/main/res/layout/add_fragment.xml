@@ -6,8 +6,8 @@
     android:orientation="vertical"
     android:gravity="center">
 <RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:gravity="center">
     <TextView
         android:layout_width="wrap_content"
@@ -19,6 +19,7 @@
         android:textColor="@color/whitw"
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"/>
+
 
     <LinearLayout
         android:id="@+id/linlaytitle"
@@ -39,7 +40,7 @@
             android:textSize="15sp" />
 
         <EditText
-            android:id="@+id/title"
+            android:id="@+id/judul"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
@@ -142,17 +143,29 @@
             android:textSize="15sp" />
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/add_pict"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"/>
 
         <Button
+            android:id="@+id/btn_imageView"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="Add Image"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:textColor="@color/whitw"
+            android:background="@drawable/btn_bg"/>
+        <Button
+            android:id="@+id/btn_addBook"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Add Book"
+            android:layout_marginTop="10dp"
             android:padding="10dp"
             android:layout_gravity="center"
             android:textColor="@color/whitw"
