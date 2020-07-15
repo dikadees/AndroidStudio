@@ -3,13 +3,8 @@ package com.example.androidlatihan.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.androidlatihan.R;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 
@@ -61,7 +56,6 @@ public class BookActivity extends AppCompatActivity {
     private void openHomeFragment(){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
         //actifityFragment
         HomeFragment strCode = new HomeFragment();
         fragmentTransaction.replace(R.id.content, strCode, "home fragment");

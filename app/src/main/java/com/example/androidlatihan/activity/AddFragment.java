@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Base64;
 import android.util.Log;
@@ -65,7 +67,7 @@ public class AddFragment extends Fragment {
         btn_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(getActivity(),"Add Image",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Add Image",Toast.LENGTH_SHORT).show();
                 imageChooser();
             }
         });
@@ -122,7 +124,7 @@ public class AddFragment extends Fragment {
         }
     }
 
-    private void insertBook(String judul, String penulis, String penerbit, String tahun, String harga,String base64Image) {
+    private void insertBook(String judul, String penulis, String penerbit, String harga, String tahun, String base64Image) {
         Book book = new Book();
         book.setHarga(Integer.valueOf(harga));
         book.setJudul(judul);
@@ -139,6 +141,7 @@ public class AddFragment extends Fragment {
                 if (response.body().isSuccess()) {
                     Log.e("TAG", "Input Success");
                     Toast.makeText(getActivity(),"Add succes",Toast.LENGTH_SHORT).show();
+                    openHomeFragment();
                 } else {
                     Log.e("TAG", "Input Gagal" + response.body().getThumb());
                     Toast.makeText(getActivity(),"Add gagal" + response.message(),Toast.LENGTH_SHORT).show();
@@ -231,7 +234,14 @@ public class AddFragment extends Fragment {
 
     }
 
+    private void openHomeFragment(){
 
+        HomeFragment strCode = new HomeFragment();
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.content, strCode, "home fragment");
+        fragmentTransaction.commit();
+
+    }
 
 
 
