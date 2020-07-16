@@ -3,14 +3,194 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="ini fragment edit"
-        android:textColor="@android:color/black"
-        android:textSize="45sp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form New Book"
+            android:textSize="30sp"
+            android:textAllCaps="true"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/whitw"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"/>
 
-    </TextView>
+        <LinearLayout
+            android:id="@+id/linlaytitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Title"
+                android:textAllCaps="true"
+                android:textColor="@color/whitw"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/judul"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/whitw"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:paddingTop="5dp"
+                android:text="penulis"
+                android:textAllCaps="true"
+                android:textColor="@color/whitw"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/penulis"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/whitw"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:paddingTop="5dp"
+                android:text="penerbit"
+                android:textAllCaps="true"
+                android:textColor="@color/whitw"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/penerbit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/whitw"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:paddingTop="5dp"
+                android:text="tahun"
+                android:textAllCaps="true"
+                android:textColor="@color/whitw"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/tahun"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/whitw"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:paddingTop="5dp"
+                android:text="harga"
+                android:textAllCaps="true"
+                android:textColor="@color/whitw"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/harga"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/whitw"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/add_pict"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+            <Button
+                android:id="@+id/btn_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Add Image"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/whitw"
+                android:background="@drawable/btn_bg"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <Button
+                    android:id="@+id/btn_editBook"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="Edit Book"
+                    android:drawableLeft="@drawable/ic_edit"
+                    android:padding="10dp"
+                    android:elevation="5sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/whitw"
+                    android:background="@drawable/btn_bg"/>
+
+                <Button
+                    android:id="@+id/btn_deleteBook"
+                    android:drawableLeft="@drawable/ic_delete"
+                    android:layout_marginLeft="11dp"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:elevation="5sp"
+                    android:background="@drawable/btn_bg"
+                    android:padding="10dp"
+                    android:text="Delete Book"
+                    android:textColor="@color/whitw" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

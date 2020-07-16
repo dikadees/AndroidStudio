@@ -63,6 +63,7 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
     public void onDetachedFromRecyclerView(RecyclerView recyclerView){
         super.onDetachedFromRecyclerView(recyclerView);
     }
+
     static class MemberViewHolder extends RecyclerView.ViewHolder{
         ImageView bookThumb;
         TextView judul;
@@ -76,6 +77,8 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
             penulis = itemView.findViewById(R.id.penulis);
         }
     }
+
+    // methode decode gambar dari base64 ke bitmap
     private Bitmap getBitmap(String base64String){
         byte[] decodedString = Base64.decode(base64String,Base64.DEFAULT);
         Bitmap decodeByte = BitmapFactory.decodeByteArray(decodedString,0,decodedString.length);
