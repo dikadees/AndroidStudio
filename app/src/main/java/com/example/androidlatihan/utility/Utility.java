@@ -10,12 +10,15 @@ import androidx.core.app.ActivityCompat;
 public class Utility {
     private String TAG = "utility";
 
+
+    //method meminta permition untuk mengakses internet
     public static void askPermission(Activity activity){
         ActivityCompat.requestPermissions(activity,
                 new String[]{Manifest.permission.INTERNET},
                 1);
     }
 
+    //method untuk cek permition
     public static boolean checkPermission(Context context){
         PackageManager pm = context.getPackageManager();
         int hasPerm = pm.checkPermission(Manifest.permission.INTERNET,context.getPackageName());

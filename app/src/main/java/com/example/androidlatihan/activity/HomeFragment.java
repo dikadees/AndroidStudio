@@ -50,6 +50,7 @@ public class HomeFragment extends Fragment {
         initRecyclerView();
     }
 
+    //
     private void initRecyclerView(){
         listMember = view.findViewById(R.id.listMember);
         linearLayoutManager = new LinearLayoutManager(context);
@@ -59,21 +60,31 @@ public class HomeFragment extends Fragment {
 
     }
 
+    //memanggil retrofit
     private void initRetrofit(){
         retrofit = RetrofitUtility.initializeRetrofit();
     }
 
     private void getAllBookData(){
+
+        //memanggil retrofit dari BookApiService
         BookApiService apiService = retrofit.create(BookApiService.class);
+        //memanggil List book yg dikirimkan BookApiService untuk mendapatkan semua data dan mengenerate token
         Call<List<Book>> result = apiService.getAllBook(AppService.getToken());
+        //var result menampung antrian dan membuat objek dari balasan List book yang di panggil
          result.enqueue(new Callback<List<Book>>() {
              @Override
+             //memanggil response dari list book
              public void onResponse(Call<List<Book>> call, Response<List<Book>> response) {
+                 //menampilkan data dari response http
+                 //dikirimkan di addData
                  addData(response.body());
              }
 
              @Override
+             //jika gagal
              public void onFailure(Call<List<Book>> call, Throwable t) {
+                 //menampilkan eror dan cetak di Stacktrace
                  t.printStackTrace();
 
              }
@@ -81,16 +92,22 @@ public class HomeFragment extends Fragment {
     }
 
 
+    //menerima data dan ditampung disini
     private void addData (List<Book>data){
+        //membuat objek dali list book diatas dibuat objekaraylist
         List<BookAdapter>bookAdapterList = new ArrayList<>();
         BookAdapter bookAdapter;
 
+        //mengulang data yang diterima
         for (Book book : data){
             Log.e("TAG", "addData: " + book.getJudul() );
             bookAdapter = new BookAdapter();
             bookAdapter.setId(book.getId());
             bookAdapter.setJudul(book.getJudul());
             bookAdapter.setPenulis(book.getPenulis());
+            bookAdapter.setPenerbit(book.getPenerbit());
+            bookAdapter.setTahun(book.getTahun());
+            bookAdapter.setHarga(String.valueOf(book.getHarga()));
             bookAdapter.setThumb(book.getThumb());
             bookAdapterList.add(bookAdapter);
         }

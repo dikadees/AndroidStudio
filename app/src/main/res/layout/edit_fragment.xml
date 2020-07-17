@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grad_bg"
+    android:layout_gravity="center">
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center">
         <TextView
             android:layout_width="wrap_content"
@@ -15,16 +17,16 @@
             android:textAllCaps="true"
             android:fontFamily="sans-serif-medium"
             android:textColor="@color/whitw"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"/>
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
 
         <LinearLayout
             android:id="@+id/linlaytitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             android:orientation="vertical">
 
             <TextView
@@ -37,7 +39,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/judul"
+                android:id="@+id/judulEdit"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
@@ -60,7 +62,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/penulis"
+                android:id="@+id/penulisEdit"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
@@ -83,7 +85,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/penerbit"
+                android:id="@+id/penerbitEdit"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
@@ -106,7 +108,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/tahun"
+                android:id="@+id/tahunEdit"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
@@ -128,7 +130,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/harga"
+                android:id="@+id/hargaEdit"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
@@ -140,14 +142,14 @@
                 android:textSize="15sp" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageViewEdit"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/add_pict"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"/>
             <Button
-                android:id="@+id/btn_imageView"
+                android:id="@+id/btn_imageViewEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="Add Image"
@@ -164,6 +166,8 @@
                     android:id="@+id/btn_editBook"
                     android:layout_width="150dp"
                     android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
                     android:text="Edit Book"
                     android:drawableLeft="@drawable/ic_edit"
                     android:padding="10dp"
@@ -175,7 +179,9 @@
                 <Button
                     android:id="@+id/btn_deleteBook"
                     android:drawableLeft="@drawable/ic_delete"
-                    android:layout_marginLeft="11dp"
+                    android:layout_marginLeft="59dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
                     android:layout_width="150dp"
                     android:layout_height="40dp"
                     android:elevation="5sp"

@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 public class BookAdapter implements Parcelable {
     private int id;
-    private String thumb,judul,penulis;
+    private String thumb,judul,penulis,penerbit,harga,tahun;
 
     public BookAdapter(){
     }
@@ -14,6 +14,9 @@ public class BookAdapter implements Parcelable {
         id = in.readInt();
         judul = in.readString();
         penulis = in.readString();
+        penerbit = in.readString();
+        harga = in.readString();
+        tahun = in.readString();
         thumb = in.readString();
     }
 
@@ -37,9 +40,35 @@ public class BookAdapter implements Parcelable {
         dest.writeInt(id);
         dest.writeString(judul);
         dest.writeString(penulis);
+        dest.writeString(penerbit);
+        dest.writeString(harga);
+        dest.writeString(tahun);
         dest.writeString(thumb);
     }
 
+    public String getPenerbit() {
+        return penerbit;
+    }
+
+    public void setPenerbit(String penerbit) {
+        this.penerbit = penerbit;
+    }
+
+    public String getHarga() {
+        return harga;
+    }
+
+    public void setHarga(String harga) {
+        this.harga = harga;
+    }
+
+    public String getTahun() {
+        return tahun;
+    }
+
+    public void setTahun(String tahun) {
+        this.tahun = tahun;
+    }
 
     public int getId() {
         return id;
