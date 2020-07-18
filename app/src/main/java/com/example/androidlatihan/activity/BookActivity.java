@@ -53,7 +53,7 @@ public class BookActivity extends AppCompatActivity {
     }
 
 
-    private void openHomeFragment(){
+    protected void openHomeFragment(){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         //actifityFragment
@@ -63,7 +63,7 @@ public class BookActivity extends AppCompatActivity {
 
 
     }
-    private void openEditFragment(){
+    protected void openEditFragment(){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 

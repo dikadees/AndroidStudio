@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment {
     private void initRecyclerView(){
         listMember = view.findViewById(R.id.listMember);
         linearLayoutManager = new LinearLayoutManager(context);
-        memberListAdapter = new MemberListAdapter();
+        memberListAdapter = new MemberListAdapter(context,this);
         listMember.setLayoutManager(linearLayoutManager);
         listMember.setAdapter(memberListAdapter);
 
@@ -94,7 +94,7 @@ public class HomeFragment extends Fragment {
 
     //menerima data dan ditampung disini
     private void addData (List<Book>data){
-        //membuat objek dali list book diatas dibuat objekaraylist
+        //membuat objek dari list book diatas dibuat objek aray list
         List<BookAdapter>bookAdapterList = new ArrayList<>();
         BookAdapter bookAdapter;
 
@@ -115,6 +115,10 @@ public class HomeFragment extends Fragment {
         memberListAdapter.addAll(bookAdapterList);
     }
 
+    //method memanggil activity dari adapter ke editfragment dengan mengirimkan id
+    public void openFragmentView(int id) {
+        ((BookActivity)getActivity()).openEditFragment();
+    }
 
 
 
